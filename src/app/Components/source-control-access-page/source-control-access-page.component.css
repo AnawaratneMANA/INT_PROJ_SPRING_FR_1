@@ -8,3 +8,9 @@
   padding: 20px;
   width:100%
 }
+
+.page-header {
+  font-size: 30px;
+  font-weight: bold;
+  color: #3C5CF7;
+}

@@ -79,9 +79,9 @@ $color-valid-font: #388e3c;
 
 .table-body-section {
   font-family: Lato, Mukta, sans-serif;
-  height: 50vh;
-  width: 100%;
+  height: auto;
   font-size: 0.9rem;
+  padding-bottom: 10px;
 }
 
 @mixin header{

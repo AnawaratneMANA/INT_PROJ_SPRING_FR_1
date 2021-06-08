@@ -1,0 +1,10 @@
+@mixin header{
+  color: black;
+  font-weight: bolder;
+  font-family: "Lato";
+  font-size: 22px;
+}
+
+.header {
+  @include header
+}
