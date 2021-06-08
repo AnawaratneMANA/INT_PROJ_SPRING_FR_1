@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchInputComponent } from './Components/search-input/search-input.component';
 import { ProjectUserTableComponent } from './Components/project-user-table/project-user-table.component';
 import { ValidationStatusComponent } from './Components/validation-status/validation-status.component';
+import { SourceControlAccessPageComponent } from './Components/source-control-access-page/source-control-access-page.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ValidationStatusComponent } from './Components/validation-status/valida
     SearchInputComponent,
     ProjectUserTableComponent,
     ValidationStatusComponent,
+    SourceControlAccessPageComponent,
   ],
   imports: [
     BrowserModule,
