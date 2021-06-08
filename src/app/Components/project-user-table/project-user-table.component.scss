@@ -1,0 +1,100 @@
+/* Colors */
+$color-primary: #81d4fa;
+$color-primary-light: #e1f5fe;
+$color-primary-dark: #4fc3f7;
+$color-invalid-font: #c62828;
+$color-invalid: #ffcdd2;
+$color-valid: #c8e6c9;
+$color-valid-font: #388e3c;
+
+.container {
+
+}
+
+.user-details-table {
+  border: 1px solid black;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px #a5a5a5;
+  text-align: left;
+  overflow: hidden;
+  border-radius: 8px;
+
+  thead {
+    box-shadow: 0 5px 10px #a5a5a5;
+
+  }
+
+  tbody {
+
+  }
+
+  th {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #3C5CF7;
+    color: white;
+  }
+
+  td {
+    padding: 1rem 2rem;
+  }
+
+  .project-id {
+    color: blue;
+    font-weight: bold;
+  }
+
+  .status {
+    border-radius: 8px;
+    background-color: red;
+    padding: 0.9rem 3rem;
+    text-align: center;
+    font-weight: bold;
+
+    &-invalid-status {
+      background-color: $color-invalid;
+      color: $color-invalid-font;
+    }
+
+    &-valid-status {
+      background-color: $color-valid;
+      color: $color-valid-font;
+    }
+  }
+
+  &::before{
+
+  }
+
+  &::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.table-body-section {
+  font-family: Lato, Mukta, sans-serif;
+  height: 50vh;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+@mixin header{
+  color: black;
+  font-weight: bolder;
+  font-family: "Lato";
+  font-size: 22px;
+}
+
+.header {
+ @include header
+}
+
+.header-section {
+
+}
