@@ -5,41 +5,60 @@
   </div>
 
   <div class="input-body-section">
+
     <div class="project-search">
-      <label for="project">Search Project :</label>
-      <input
-        class="input-field"
+      <span>Select Project: </span>
+      <ng-autocomplete
+        [data]= "data$ | async"
+        [searchKeyword]="keyword"
+        (selected)='selectEvent($event)'
+        (inputChanged)='onChangeSearch($event)'
         id="project"
         name="project"
         placeholder="Search Project..."
-        type="text"
+        (inputFocused)='onFocused($event)'
+        [itemTemplate]="itemTemplate"
+        [notFoundTemplate]="notFoundTemplate"
       >
+      </ng-autocomplete>
+
+      <ng-template #itemTemplate let-item>
+        <a [innerHTML]="item.name"></a>
+      </ng-template>
+
+      <ng-template #notFoundTemplate let-notFound>
+        <div [innerHTML]="notFound"></div>
+      </ng-template>
       </div>
+
+
     <div class="user-search">
-      <label for="user">Search Project :</label>
-      <input
-        class="input-field"
+      <span>Select User: </span>
+      <ng-autocomplete
+        [data]= "data$ | async"
+        [searchKeyword]="keyword"
+        (selected)='selectEvent($event)'
+        (inputChanged)='onChangeSearch($event)'
         id="user"
         name="user"
         placeholder="Search User..."
-        type="text"
+        (inputFocused)='onFocused($event)'
+        [itemTemplate]="itemTemplate"
+        [notFoundTemplate]="notFoundTemplate"
       >
+      </ng-autocomplete>
+
+      <ng-template #itemTemplate let-item>
+        <a [innerHTML]="item.name"></a>
+      </ng-template>
+
+      <ng-template #notFoundTemplate let-notFound>
+        <div [innerHTML]="notFound"></div>
+      </ng-template>
     </div>
 
     <div class="select-btn-section">
       <button class="select-btn">Select</button>
-    </div>
-
-    <div class="autocomplete-testing-component">
-      <ng-autocomplete
-        [data]="data"
-        [searchKeyword]="keyword"
-        (selected)='selectEvent($event)'
-        (inputChanged)='onChangeSearch($event)'
-        (inputFocused)='onFocused($event)'
-        placeholder="Search Project..."
-      >
-      </ng-autocomplete>
     </div>
   </div>
 </div>
