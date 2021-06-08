@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import {DataServiceComponent} from "./data-service/data-service.component";
 
 @Component({
   selector: 'app-search-input',
   templateUrl: './search-input.component.html',
-  styleUrls: ['./search-input.component.scss']
+  styleUrls: ['./search-input.component.scss'],
+  providers: [DataServiceComponent]
 })
 export class SearchInputComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataSvc: DataServiceComponent) {
+    this.getData();
+  }
 
   public keyword = "";
   data = [
@@ -25,15 +29,25 @@ export class SearchInputComponent implements OnInit {
     },
   ]
 
-  itemTemplate(): void {
-
+  selectEvent(item: any) {
+    // do something with selected item
   }
 
-  notFoundTemplate(): void {
+  onChangeSearch(val: string) {
+    // fetch remote data from here
+    // And reassign the 'data' which is binded to 'data' property.
+  }
 
+  onFocused(e: any){
+    // do something when input is focused
   }
 
   ngOnInit(): void {
   }
+
+  getData(){
+    this.dataSvc.getAllCountries().subscribe(console.log);
+  }
+
 
 }

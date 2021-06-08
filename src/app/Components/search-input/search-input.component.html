@@ -32,9 +32,11 @@
 
     <div class="autocomplete-testing-component">
       <ng-autocomplete
-        class="search"
         [data]="data"
         [searchKeyword]="keyword"
+        (selected)='selectEvent($event)'
+        (inputChanged)='onChangeSearch($event)'
+        (inputFocused)='onFocused($event)'
         placeholder="Search Project..."
       >
       </ng-autocomplete>
