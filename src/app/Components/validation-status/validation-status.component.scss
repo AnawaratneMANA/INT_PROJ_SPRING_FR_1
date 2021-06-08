@@ -1,3 +1,4 @@
+$color-invalid-font: #c62828;
 @mixin header{
   color: black;
   font-weight: bolder;
@@ -7,4 +8,18 @@
 
 .header {
   @include header
+}
+
+.status {
+  border-radius: 8px;
+  background-color: #ffcdd2;
+  padding: 0.9rem 3rem;
+  text-align: center;
+  font-weight: bold;
+  color: $color-invalid-font;
+}
+
+.status-font {
+  font-weight: bold;
+  font-family: Lato;
 }

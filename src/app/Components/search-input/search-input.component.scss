@@ -34,9 +34,11 @@ label {
 .select-btn-section {
   margin-left: 10px;
   .select-btn {
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: #3C5CF7;
     color: white;
-    font-weight: bold;
+    padding: 0.9rem 2rem;
+    font-weight: normal;
+    margin-left: 10px;
   }
 }
