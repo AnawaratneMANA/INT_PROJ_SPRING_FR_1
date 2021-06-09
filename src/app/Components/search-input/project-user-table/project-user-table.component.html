@@ -18,14 +18,13 @@
       </thead>
       <tbody>
         <tr *ngFor="let r of row">
-          <td class="project-id">PR1001</td>
-          <td>U0001</td>
+          <td class="project-id">{{r.projectId.name}}</td>
+          <td>{{r.userId}}</td>
           <td>Nirmith Akash</td>
-          <td>Nirmith.anawarathne-intern@dialog.lk</td>
+          <td>{{r.email}}</td>
           <td><p class="status status-valid-status">Valid</p></td>
           <td><button class="control-button">Remove</button></td>
         </tr>
-        formGroup {{row.length}}
       </tbody>
     </table>
     <div class="submit-section">

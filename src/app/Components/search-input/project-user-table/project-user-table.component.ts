@@ -6,15 +6,24 @@ import {Form, FormGroup} from "@angular/forms";
   templateUrl: './project-user-table.component.html',
   styleUrls: ['./project-user-table.component.scss']
 })
-export class ProjectUserTableComponent implements OnInit {
+export class ProjectUserTableComponent implements OnInit, OnChanges{
   @Input() userDetailsForm: FormGroup;
-  @Input() row: Array<FormGroup> = [];
+  @Input() row: Array<any> = [];
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  //Method to catch the data coming from the parent.
+  ngOnChanges(row) {
+    console.log("This is coming from the table class.")
+    console.log(row);
+  }
+
+
+  /*
+  * Implement the DB calling method and Validation methods
+  * Clear the table upon submitting the data.
+  * */
 
 
 }
