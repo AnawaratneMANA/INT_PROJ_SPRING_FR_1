@@ -13,6 +13,7 @@ export class SearchInputComponent implements OnInit {
   public keyword = "name";
   public data$: Observable<any[]> = new Observable<any[]>();
   userDetailsForm: FormGroup;
+  row: Array<FormGroup> = [];
 
   constructor(private dataSvc: DataServiceComponent, private fb: FormBuilder) {
     this.getData();
@@ -41,6 +42,7 @@ export class SearchInputComponent implements OnInit {
 
   onSubmit(): void {
     console.log(this.userDetailsForm);
+    this.row.push(this.userDetailsForm);
   }
 
   getData(): void{

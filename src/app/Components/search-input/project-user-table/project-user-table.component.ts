@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {FormGroup} from "@angular/forms";
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import {Form, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-project-user-table',
@@ -7,13 +7,14 @@ import {FormGroup} from "@angular/forms";
   styleUrls: ['./project-user-table.component.scss']
 })
 export class ProjectUserTableComponent implements OnInit {
-
-  public rowArray = [{
-
-  }];
+  @Input() userDetailsForm: FormGroup;
+  @Input() row: Array<FormGroup> = [];
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  //Method to catch the data coming from the parent.
+
 
 }

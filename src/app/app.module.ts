@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchInputComponent } from './Components/search-input/search-input.component';
-import { ProjectUserTableComponent } from './Components/project-user-table/project-user-table.component';
+import { ProjectUserTableComponent } from './Components/search-input/project-user-table/project-user-table.component';
 import { ValidationStatusComponent } from './Components/validation-status/validation-status.component';
 import { SourceControlAccessPageComponent } from './Components/source-control-access-page/source-control-access-page.component';
 import {AutocompleteLibModule} from 'angular-ng-autocomplete';
