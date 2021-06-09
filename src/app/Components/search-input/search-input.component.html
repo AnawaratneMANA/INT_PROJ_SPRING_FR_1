@@ -4,21 +4,23 @@
     <h3>Select users to add into the repository.</h3>
   </div>
   <form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()">
-    <div class="user-details-section">
-      <label for="user">User ID: </label>
-      <br>
-      <input
-        [value]="value"
-        class="input-field input-field-disabled"
-        type="text"
-        id="user"
-        name="user"
-        formControlName="userId"
-        [readOnly]="false"
-      >
-    </div>
 
     <div class="input-body-section">
+
+      <div class="user-details-section">
+        <label for="user">User ID: </label>
+        <br>
+        <input
+          [value]="value"
+          class="input-field input-field-disabled"
+          type="text"
+          id="user"
+          name="user"
+          formControlName="userId"
+          [readOnly]="false"
+        >
+      </div>
+
       <div class="project-search">
         <span>Select Project: </span>
         <ng-autocomplete

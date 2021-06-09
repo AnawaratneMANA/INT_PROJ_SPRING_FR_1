@@ -7,10 +7,10 @@
 
 .input-field {
   padding: 10px;
-  margin-top: 10px;
+  margin-right: 50px;
   font-size: 15px;
   border-radius: 10px;
-  width: 198.67px;
+  width: 248.67px;
   height: 35px;
 }
 .input-field-disabled {
@@ -26,8 +26,9 @@ label {
 }
 
 .project-search {
-  margin-bottom: 10px;
   margin-right: 10px;
+  width: 248.67px;
+  height: 82.13px;
 }
 
 .input-body-section {
@@ -42,6 +43,7 @@ label {
   background-color: #3C5CF7;
   color: white;
   padding: 0.9rem 2rem;
+  text-align: center;
   font-weight: normal;
   margin-left: 10px;
 }
