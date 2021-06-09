@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import {DataServiceComponent} from "./data-service/data-service.component";
 import {Observable} from "rxjs";
 import {FormGroup, FormBuilder, FormArray} from "@angular/forms";
@@ -14,6 +14,7 @@ export class SearchInputComponent implements OnInit {
   public data$: Observable<any[]> = new Observable<any[]>();
   userDetailsForm: FormGroup;
   row: Array<any> = [];
+  @Output() value: String = "UI100";
 
   constructor(private dataSvc: DataServiceComponent, private fb: FormBuilder) {
     this.getData();

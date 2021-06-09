@@ -8,12 +8,13 @@
       <label for="user">User ID: </label>
       <br>
       <input
-        value="U001"
-        class="input-field disabled"
+        [value]="value"
+        class="input-field input-field-disabled"
         type="text"
         id="user"
         name="user"
         formControlName="userId"
+        [readOnly]="false"
       >
     </div>
 
