@@ -18,15 +18,17 @@ $color-valid-font: #388e3c;
   box-shadow: 0 5px 10px #a5a5a5;
   text-align: left;
   overflow: hidden;
+
   border-radius: 8px;
 
   thead {
     box-shadow: 0 5px 10px #a5a5a5;
 
+
   }
 
   tbody {
-
+    overflow:scroll;
   }
 
   th {

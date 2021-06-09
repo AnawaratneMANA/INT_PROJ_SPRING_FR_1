@@ -38,11 +38,11 @@ export class SearchInputComponent implements OnInit {
       userId: '',
       projectId: '',
       email: 'Nirmith.Anawaratne-inter@dialog.lk',
+      supervisorId: ''
     })
   }
 
   onSubmit(): void {
-    console.log(this.userDetailsForm.value.projectId)
     let userDetail = {
       userId: this.userDetailsForm.value.userId,
       projectId: this.userDetailsForm.value.projectId,

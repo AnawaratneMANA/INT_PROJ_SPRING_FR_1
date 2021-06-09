@@ -11,6 +11,9 @@
 .user-details-table thead {
   box-shadow: 0 5px 10px #a5a5a5;
 }
+.user-details-table tbody {
+  overflow: scroll;
+}
 .user-details-table th {
   padding: 1rem 2rem;
   text-transform: uppercase;
