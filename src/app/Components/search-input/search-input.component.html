@@ -3,62 +3,51 @@
     <div class="header">Search Users and Projects</div>
     <h3>Select users to add into the repository.</h3>
   </div>
-
-  <div class="input-body-section">
-
-    <div class="project-search">
-      <span>Select Project: </span>
-      <ng-autocomplete
-        [data]= "data$ | async"
-        [searchKeyword]="keyword"
-        (selected)='selectEvent($event)'
-        (inputChanged)='onChangeSearch($event)'
-        id="project"
-        name="project"
-        placeholder="Search Project..."
-        (inputFocused)='onFocused($event)'
-        [itemTemplate]="itemTemplate"
-        [notFoundTemplate]="notFoundTemplate"
-      >
-      </ng-autocomplete>
-
-      <ng-template #itemTemplate let-item>
-        <a [innerHTML]="item.name"></a>
-      </ng-template>
-
-      <ng-template #notFoundTemplate let-notFound>
-        <div [innerHTML]="notFound"></div>
-      </ng-template>
-      </div>
-
-
-    <div class="user-search">
-      <span>Select User: </span>
-      <ng-autocomplete
-        [data]= "data$ | async"
-        [searchKeyword]="keyword"
-        (selected)='selectEvent($event)'
-        (inputChanged)='onChangeSearch($event)'
+  <form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()">
+    <div class="user-details-section">
+      <label for="user">User ID: </label>
+      <br>
+      <input
+        value="U001"
+        class="input-field disabled"
+        type="text"
         id="user"
         name="user"
-        placeholder="Search User..."
-        (inputFocused)='onFocused($event)'
-        [itemTemplate]="itemTemplate"
-        [notFoundTemplate]="notFoundTemplate"
+        formControlName="userId"
       >
-      </ng-autocomplete>
-
-      <ng-template #itemTemplate let-item>
-        <a [innerHTML]="item.name"></a>
-      </ng-template>
-
-      <ng-template #notFoundTemplate let-notFound>
-        <div [innerHTML]="notFound"></div>
-      </ng-template>
     </div>
 
-    <div class="select-btn-section">
-      <button class="select-btn">Select</button>
+    <div class="input-body-section">
+      <div class="project-search">
+        <span>Select Project: </span>
+        <ng-autocomplete
+          [data]="data$ | async"
+          [searchKeyword]="keyword"
+          (selected)='selectEvent($event)'
+          (inputChanged)='onChangeSearch($event)'
+          id="project"
+          name="project"
+          placeholder="Search Project..."
+          (inputFocused)='onFocused($event)'
+          [itemTemplate]="itemTemplate"
+          [notFoundTemplate]="notFoundTemplate"
+          formControlName="projectId"
+        >
+        </ng-autocomplete>
+
+        <ng-template #itemTemplate let-item>
+          <a [innerHTML]="item.name"></a>
+        </ng-template>
+
+        <ng-template #notFoundTemplate let-notFound>
+          <div [innerHTML]="notFound"></div>
+        </ng-template>
+      </div>
+
+      <div class="select-btn-section">
+        <button type="submit" class="select-btn">Select</button>
+      </div>
+
     </div>
-  </div>
+  </form>
 </div>

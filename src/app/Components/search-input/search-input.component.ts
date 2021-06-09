@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataServiceComponent} from "./data-service/data-service.component";
 import {Observable} from "rxjs";
-
+import {FormGroup, FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'app-search-input',
@@ -12,8 +12,9 @@ import {Observable} from "rxjs";
 export class SearchInputComponent implements OnInit {
   public keyword = "name";
   public data$: Observable<any[]> = new Observable<any[]>();
+  userDetailsForm: FormGroup;
 
-  constructor(private dataSvc: DataServiceComponent) {
+  constructor(private dataSvc: DataServiceComponent, private fb: FormBuilder) {
     this.getData();
   }
 
@@ -31,6 +32,15 @@ export class SearchInputComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.userDetailsForm = this.fb.group({
+      userId: '',
+      projectId: '',
+      email: 'Nirmith.Anawaratne-inter@dialog.lk',
+    })
+  }
+
+  onSubmit(): void {
+    console.log(this.userDetailsForm);
   }
 
   getData(): void{

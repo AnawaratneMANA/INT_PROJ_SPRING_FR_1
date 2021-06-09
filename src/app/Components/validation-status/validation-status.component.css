@@ -1,0 +1,22 @@
+.header {
+  color: black;
+  font-weight: bolder;
+  font-family: "Lato";
+  font-size: 22px;
+}
+
+.status {
+  border-radius: 8px;
+  background-color: #ffcdd2;
+  padding: 0.9rem 3rem;
+  text-align: center;
+  font-weight: bold;
+  color: #c62828;
+}
+
+.status-font {
+  font-weight: bold;
+  font-family: Lato;
+}
+
+/*# sourceMappingURL=validation-status.component.css.map */
